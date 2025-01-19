@@ -1,11 +1,11 @@
 function CalculadoraIMC(){
     var peso = parseFloat(document.getElementById("peso").value);
     var altura = parseFloat(document.getElementById("altura").value);
-    var resultado = document.getElementById("titulo");
-    var resultadoIMC = document.getElementById("resultadoIMC")
+    var resultado = document.getElementById("resultado");
+    var classificacao = document.getElementById("classificacao");
     var IMC2 = IMC(peso, altura);
     resultado.innerHTML = IMC2.toFixed(2);
-    resultadoIMC.innerHTML = ClassificacaoIMC(IMC2);
+    classificacao.innerHTML = ClassificacaoIMC(IMC2);
 }
 
 function IMC (a, b){
@@ -15,15 +15,15 @@ function IMC (a, b){
 function ClassificacaoIMC(IMC)
 {
     if(IMC >= 40)
-       return resultadoIMC.innerHTML = "Obesidade Grau III";
+        return classificacao.innerHTML = "Obesidade Grau III";
     else if(IMC <= 39.99 && IMC >= 35)
-       return resultadoIMC.innerHTML = "Obesidade Grau II";
+        return classificacao.innerHTML = "Obesidade Grau II";
     else if(IMC <= 34.99 && IMC >= 30)
-        return resultadoIMC.innerHTML = "Obesidade Grau I";
+        return classificacao.innerHTML = "Obesidade Grau I";
     else if(IMC <= 29.99 && IMC >= 25)
-        return resultadoIMC.innerHTML = "Sobrepeso";
+        return classificacao.innerHTML = "Sobrepeso";
     else if(IMC <= 24.99 && IMC >= 18.6)
-        return resultadoIMC.innerHTML = "Normal";
+        return classificacao.innerHTML = "Normal";
     else
-        return resultadoIMC.innerHTML = "Abaixo do Normal";
+        return classificacao.innerHTML = "Abaixo do Normal";
 }
