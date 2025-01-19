@@ -3,21 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <script src="index.js"></script>
-    <title>Aula do zé cu</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora IMC</title>
 </head>
 <body>
-    <div id="Calculadora">
-        <h1 id="titulo">Ola Mundo!</h1>
+    <div id="Calculadora" class="w3-animate-top">
         
-        <form id="textos">
-            <div><label for="">Calculado de IMC</label></div>
-                <input type="text" name="peso" id="peso" placeholder="Digite o seu peso em Kg">
-                <input type="text" name="altura" id="altura"placeholder="Digite o segundo numero">
-                    <div><button type="button" onclick="CalculadoraIMC()" >Calcular IMC</button></div>
-                    <div><h1 id="resultadoIMC">Você está</h1></div>
+        <h1 id="titulo" class="w3-center">Calculadora IMC</h1>
+        
+        <form id="textos" class="w3-form">
+            <div class="w3-padding"><input type="text" name="peso" id="peso" placeholder="Digite o seu peso em Kg" class="w3-input w3-padding"></div>
+            <div class="w3-padding"><input type="text" name="altura" id="altura"placeholder="Digite a sua altura em Metros" class="w3-input w3-padding"></div>
+            <div class="w3-center w3-padding "><button type="button" onclick="CalculadoraIMC()" class="w3-button w3-black w3-round-xxlarge">Calcular seu IMC</button></div>
         </form>
+        <div class="w3-padding">
+            <div style="display: flex;">
+                <h1 style="font-weight: bold;">Sua Classificação:</h1>
+                <h1 id="classificacao" style="padding-left: 12px;"></h1>
+            </div>
+            <div style="display: flex;">
+            <h1 style="font-weight: bold;">Seu IMC:</h1>
+            <h1 id="resultado" style="padding-left: 12px;"></h1>
+            </div>
+        </div>
+        </div>
     </div>
 </body>
 </html>
